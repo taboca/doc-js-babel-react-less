@@ -40,10 +40,10 @@ npm install --save-dev @babel/preset-react
 
 ## Webpack css loader
 
-We may need to check what is the https://github.com/webpack-contrib/style-loader.
 
 ```
 npm install --save-dev css-loader
+npm install style-loader -D
 ```
 
 ## Webpack config for ES2015 (-dev), CSS, and React
