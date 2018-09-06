@@ -36,6 +36,47 @@ npm install --save-dev @babel/preset-env
 npm install --save-dev @babel/preset-react
 ```
 
+## Webpack css loader
+
+
+```
+npm install --save-dev css-loader
+```
+
+## Webpack config for ES2015 (-dev), CSS, and React
+
+```
+var path = require("path");
+var DIST_DIR = path.resolve(__dirname, "dist");
+var SRC_DIR = path.resolve(__dirname, "src");
+var config = {
+    entry: [ SRC_DIR + "/index.js"],
+    output: {
+        path: DIST_DIR + "/",
+        filename: "bundle.js",
+        publicPath: "/"
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js?/,
+                include: SRC_DIR,
+                loader: "babel-loader",
+                query: {
+                    presets: ["@babel/preset-react", "@babel/preset-env"]
+                }
+            },
+            {
+              test: /\.css$/,
+              use: [ 'css-loader' ]
+            }
+        ]
+    }
+};
+module.exports = config;
+
+```
+
 
 ## Webpack dev server
 
