@@ -12,6 +12,7 @@ var config = {
         rules: [
             {
                 test: /\.js?/,
+                exclude: "/node_modules/",
                 include: SRC_DIR,
                 loader: "babel-loader",
                 query: {
@@ -20,8 +21,29 @@ var config = {
             },
             {
               test: /\.css$/,
-              use: [ 'css-loader' ]
+              use: ["style-loader", "css-loader"]
+            },
+
+            {
+              test: /\.less$/,
+              use: [
+                {
+                  loader: "style-loader"
+                },
+                {
+                  loader: "css-loader",
+                  options: {
+                    sourceMap: true,
+                    modules: true,
+                    localIdentName: "[local]___[hash:base64:5]"
+                  }
+                },
+                {
+                  loader: "less-loader"
+                }
+              ]
             }
+
         ]
     }
 };

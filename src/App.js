@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from "./other.less";
 
 class App extends Component {
 
@@ -8,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>Hello world</div>
+      <div  className={style.testing}>Hello world</div>
     );
   }
 

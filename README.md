@@ -38,6 +38,7 @@ npm install --save-dev @babel/preset-react
 
 ## Webpack css loader
 
+We may need to check what is the https://github.com/webpack-contrib/style-loader.
 
 ```
 npm install --save-dev css-loader
@@ -77,11 +78,26 @@ module.exports = config;
 
 ```
 
-
 ## Webpack dev server
 
 For reloading...
 
 ```
 npm install webpack-dev-server --save-dev
+```
+
+## Testing at this stage
+
+```
+npm run babel-start
+```
+
+Test with localhost:8080
+
+## Adding Less
+
+```
+npm install less -D
+npm install less-loader --save-dev
+
 ```
