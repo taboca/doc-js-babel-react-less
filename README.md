@@ -18,8 +18,10 @@ npm install webpack webpack-cli --save-dev
 
 ## The Babel, loader and modules?
 
+
 ```
 npm install -D babel-loader
+npm install @babel/core -D
 ```
 
 ## Babel support for ES2015 (now preset-env)
