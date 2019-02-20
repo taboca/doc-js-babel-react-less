@@ -1,4 +1,4 @@
-# Webpack for the basics
+# Manually setting up Webpack for a simple project using less 
 
 ```
 nvm use 8.6
